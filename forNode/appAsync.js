@@ -118,9 +118,9 @@ function downCourse(course, callback) {
 
 function downloadPic(src, dest, callback) {
   console.log("-----src----")
-  // request(src).pipe(fs.createWriteStream(dest)).on('close', function () {
-  callback(null, src + 'pic saved!')
-  // })
+  request(src).pipe(fs.createWriteStream(dest)).on('close', function () {
+    callback(null, src + 'pic saved!')
+  })
 };
 
 function getVideoUrl(url, title, callback) {
