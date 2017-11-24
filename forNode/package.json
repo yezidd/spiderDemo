@@ -9,9 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.0",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
     "flyio": "^0.2.7",
+    "koa": "^2.4.1",
     "superagent": "^3.8.1"
   }
 }

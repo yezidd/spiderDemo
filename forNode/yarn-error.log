@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add flyio
+  /usr/local/bin/node /usr/local/bin/yarn add koa
 
 PATH: 
   /Users/mac/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/aria2/bin:/Users/mac/Library/Android/sdk/tools:/Users/mac/Library/Android/sdk/platform-tools:/Users/mac/android-ndk-r13b
@@ -26,7 +26,9 @@ npm manifest:
     "license": "ISC",
     "dependencies": {
       "cheerio": "^1.0.0-rc.2",
-      "express": "^4.16.2"
+      "express": "^4.16.2",
+      "flyio": "^0.2.7",
+      "superagent": "^3.8.1"
     }
   }
 
