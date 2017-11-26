@@ -1,4 +1,5 @@
 var request = require("superagent");
+var requestAll = require("request");
 var cheerio = require("cheerio");
 var async = require("async");
 var fs = require("fs");
@@ -22,6 +23,14 @@ var cookie_flag = "";
 
 //全局的数据变量
 var data = [];
+
+var dataArray = [];
+
+
+var index = 0;
+
+var nextIndex = 0;
+
 
 //就是爬login页面实现登录状态
 async function getLogin(callback) {
@@ -73,6 +82,7 @@ function getArray_list(arg1, callback) {
             url: URL + url,
             title
           });
+
         });
         // console.log(array_list);
 
@@ -90,40 +100,75 @@ function downCourse(course, callback) {
       const $ = cheerio.load(res.text, {decodeEntities: false});
       var title = $('div.banner').find('h4').text();
 
-      if (!fs.existsSync('./' + title)) {
-        fs.mkdirSync('./' + title);
+      if (!fs.existsSync(myTrim('./' + title))) {
+        fs.mkdirSync(myTrim('./' + title));
       }
       course.lesson = [];
       $('ul.video-list').find('li').each(function (i, e) {
         var utl = $(e).find('a').attr("href");
-        async.waterfall([
-          function (callbackNew) {
-            getVideoUrl(URL + utl, course.title, callbackNew);
-            // callbackNew(null,0)
-          },
-          function (dest, src, callbackNew) {
-            // console.log(dest,src,"--------")
-            downloadPic(src, dest, callbackNew);
-            // console.log(arg1)
-            // callbackNew(null, 0)
-          }
-        ], function (err, result) {
-          console.log("最终结果" + result);
-        })
-      });
-      callback(null, 0);
-    })
+        dataArray.push({
+          url: utl,
+          title: course.title,
+          fileName:course.title + i
+        });
 
+        index++;
+        console.log({
+          url: utl,
+          title: course.title,
+          fileName:course.title + i
+        });
+      });
+      callback(null, dataArray);
+    })
+}
+
+function downVideo(course, callback) {
+  async.waterfall([
+    function (callbackNew) {
+      getVideoUrl(URL + course.url, course.title,course.fileName,callbackNew);
+      // callbackNew(null,0)
+    },
+    function (dest, src, callbackNew) {
+      // console.log(dest,src,"--------")
+      downloadPic(src, dest, callbackNew);
+      // console.log(arg1)
+      // callbackNew(null, 0)
+    }
+  ], function (err, result) {
+    console.log("最终结果" + result);
+    callback(null, 0)
+  })
 }
 
 function downloadPic(src, dest, callback) {
-  console.log("-----src----")
-  request(src).pipe(fs.createWriteStream(dest)).on('close', function () {
-    callback(null, src + 'pic saved!')
-  })
+  
+  if(nextIndex>=676)
+  {
+    console.log("-----src----",escape(src),dest);
+      try{
+        console.log("-----srcALl----",src,dest);
+          requestAll(myTrim(src)).pipe(fs.createWriteStream(myTrim(dest))).on('close', function () {
+            console.log("-----src----",src,dest);
+              callback(null, dest + 'pic saved!')
+          })
+    }
+    catch(err)
+    {
+      console.log("-----src----",src,dest);
+      console.log(err.message);
+      callback(null, dest + 'pic saved!')
+    }
+  }
+  else{
+    callback(null, dest + 'pic saved!---------')
+  }
+  console.log(nextIndex++,nextIndex,"---现在的数量");
+  console.log(index, "---总总哟的数量")
 };
 
-function getVideoUrl(url, title, callback) {
+function getVideoUrl(url, title, fileNameNew,callback) {
+  console.log("-----传递过来的参数", url, title,fileNameNew);
   request.get(url)
     .set(base_config)
     .set('Cookie', cookie_flag)
@@ -133,16 +178,22 @@ function getVideoUrl(url, title, callback) {
         const $ = cheerio.load(res.text, {decodeEntities: false});
 
         let fileName = $("div.container").find('h1').text();
-
+        console.log($('video').find('source').attr("type"), "---类型");
         let url = $('video').find('source').attr("src");
+
+        console.log("url:" + url);
 
         var name = "http:";
 
-        if (url.indexOf(name) !== -1) {
-          callback(null, './' + title + "/" + myTrim(fileName) + ".mp4", url)
+        if (url.toString().indexOf(name) !== -1) {
+          let urlNew = url.toString();
+
+          let newstr = urlNew.replace("http:","https:");
+          console.log(urlNew,"----新的视频地址---");
+          callback(null, myTrim('./' + title + "/" + myTrim(fileNameNew) + ".mp4"),myTrim(newstr))
         }
         else {
-          callback(null, './' + title + "/" + myTrim(fileName) + ".mp4", 'https:' + url)
+          callback(null, myTrim('./' + title + "/" + myTrim(fileNameNew) + ".mp4"), myTrim('https:' + url))
         }
       }
       catch (err) {
@@ -151,8 +202,11 @@ function getVideoUrl(url, title, callback) {
     })
 }
 
-function myTrim(x) {
-  return x.replace(/^\s+|\s+$/gm, '');
+function myTrim(str) {
+  console.log(str.length,str,"-------------2-------");
+  str = str.replace(/\s+/g,""); 
+  console.log(str.length,str,"-----------3---------");
+  return str
 }
 
 //主函数
@@ -166,16 +220,26 @@ async function run() {
     },
     function (arg1, callback) {
       async.eachSeries(data, downCourse, callback);
-
     },
+
   ], function (err, result) {
     if (err) {
       console.log("登录下载课程列表出现问题:" + err.message);
     } else {
-      console.log("jieguo", data);
+      async.waterfall([
+        function (callback) {
+          async.eachSeries(dataArray, downVideo, callback);
+        }
+      ], function (err, result) {
+        if (err) {
+          console.log("登录下载课程列表出现问题:" + err.message);
+        } else {
+          console.log("第二种", "结果");
+          console.log(result);
+        }
+      })
     }
   });
-
 }
 
 run();
