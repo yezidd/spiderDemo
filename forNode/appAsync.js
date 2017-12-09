@@ -14,6 +14,7 @@ const base_config = {
   "Connection": "keep-alive",
   "Host": "nodelover.me",
   "Origin": "https://nodelover.me",
+  // "X-Forwarded-For": "192.168.1.111,192.168.1.112 ,192.168.1.113",
   // "Cookie": "EGG_SESS=i5zf542Hv3BQTf6rvkatyhqfRGsB4g8sJ3r_bov-ePo5u0_x6yXNqCO5DGFOjG5FYNHb7WrTOGyOo4SbB-s9fmcR045sxwOPSxVvd96AVNCIRQLGoBiYq4RoKHtTem0rpqWC7BBgXbBANwVWplnDzRuqixV3YRUlSQPptX64dzZJxyWhm6-ASGveR8AiydGR_mB0eZY5wJ63FioYbdeRp2Tiw7wDgeWL9AqiAeI1hJCUO_bFQ8twrWe_q-Vd1owVKOdCGbbGzZXp-uDsGLt9PDyh5mU-W6jNYdmt8GWHl4iyrJXb9Nk5gaKS5eUdPjS010_1zgYG7o-rQX0MieFx5Q9v-V-myCqtiFmmjPthi4CqCxKFiM5TKQ50YZtzozAQWdanEeG9aOBpA-4NYOpuAWPNSaW3_mS5AVPDzWxEmxCYWq3jcaiRtShNyRae8rMYj-rdPeJ63ZTprYD5kclWTkZSXAHWTAlYQ3WEDNPESd08BeY5ZNm7XXV05pyn1qUGGxl9ScdaT2QFQoL0JDrJAKbATehoGzXH6szylAhjml0hcAvdbg5Hme1ZyJvCGKB4MGDGBCwQcA8LtSkHoEJ1U2r9VHYoPRY3Z8Cvi-NY9AxYOENR-hV2iF8g6nRYndhT7bz8uBmaWNdd4N659QTdJD06dlqPm6OxSShW-_f4mPRDpU4oWplY4by8AG2HbbJA9KA2etle-z5kkm4tjLwHzC2rad2J7oRilUMHvm_hUztjbmd5Nnd5Z7y1hmlau2dfzmu_nZFXbwIUAKNXEQV7tlVh1gC2II6emF1vI084q4q60TYT0O37EJaPCFMeV29g5SEWtcraWI0WMSy17HYYegXGHNLq9OlESFLElBGekvmB93_sBA7IbdKxtf_IKEcPh5VfgdwqoW-dEvFW7O5s9wW9egJjTv8yJ0HevDxVYNi9KcPiiFlizUmOP9tFOc9DjGrA0gg-j2Ar8MT6aKOAtDkOO13EXzNquxX-Zrl9QbgEctzSL1ItSzea_qkvD-D2n8OBFoivgL8soH3KhjH41T6K-LZR0KwQlYAm8drOIg0=; ",
   "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
 };
@@ -26,6 +27,8 @@ var data = [];
 
 var dataArray = [];
 
+// 伪造的ip
+ipConfig = ["10.111.198.99","10.111.198.98","10.111.198.97","10.111.198.96","10.111.198.95"];
 
 var index = 0;
 
@@ -54,6 +57,7 @@ function getArray_list(arg1, callback) {
     .set('Cookie', arg1.cookie_flag)
     .type('form')
     .redirects(0)
+    .set("X-Forwarded-For" , ipConfig[parseInt(Math.random()*4)])
     .send({
       "email": "3050232357@qq.com",
       "password": "yjs10086",
@@ -96,6 +100,7 @@ function getArray_list(arg1, callback) {
 function downCourse(course, callback) {
   request.get(course.url)
     .set(base_config)
+    .set("X-Forwarded-For" , ipConfig[parseInt(Math.random()*4)])
     .end(function (err, res) {
       const $ = cheerio.load(res.text, {decodeEntities: false});
       var title = $('div.banner').find('h4').text();
@@ -141,28 +146,38 @@ function downVideo(course, callback) {
   })
 }
 
-function downloadPic(src, dest, callback) {
+async function downloadPic(src, dest, callback) {
   
-  if(nextIndex>=676)
-  {
-    console.log("-----src----",escape(src),dest);
-      try{
-        console.log("-----srcALl----",src,dest);
-          requestAll(myTrim(src)).pipe(fs.createWriteStream(myTrim(dest))).on('close', function () {
-            console.log("-----src----",src,dest);
-              callback(null, dest + 'pic saved!')
-          })
-    }
-    catch(err)
-    {
-      console.log("-----src----",src,dest);
-      console.log(err.message);
-      callback(null, dest + 'pic saved!')
-    }
-  }
-  else{
-    callback(null, dest + 'pic saved!---------')
-  }
+  // if(nextIndex>=676)
+  // {
+  //   console.log("-----src----",escape(src),dest);
+  //     try{
+  //       console.log("-----srcALl----",src,dest);
+  //         requestAll(myTrim(src)).pipe(fs.createWriteStream(myTrim(dest))).on('close', function () {
+  //           console.log("-----src----",src,dest);
+  //             callback(null, dest + 'pic saved!')
+  //         })
+  //   }
+  //   catch(err)
+  //   {
+  //     console.log("-----src----",src,dest);
+  //     console.log(err.message);
+  //     callback(null, dest + 'pic saved!')
+  //   }
+  // }
+  // else{
+  //   callback(null, dest + 'pic saved!---------')
+  // }
+  console.log(dest,src);
+
+  let newdest = dest.toString().replace(".mp4",".txt");
+  
+  console.log(newdest,dest,src);
+
+  await fs.writeFileSync(newdest, src, 'utf8');
+
+  callback(null, dest + 'pic saved!---------')
+
   console.log(nextIndex++,nextIndex,"---现在的数量");
   console.log(index, "---总总哟的数量")
 };
@@ -172,6 +187,7 @@ function getVideoUrl(url, title, fileNameNew,callback) {
   request.get(url)
     .set(base_config)
     .set('Cookie', cookie_flag)
+    .set("X-Forwarded-For" , ipConfig[parseInt(Math.random()*4)])
     .end(function (err, res) {
       // console.log(res, "--------")
       try {
