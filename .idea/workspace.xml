@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f8dddef-23b7-4279-b427-6e9cef7741d4" name="Default" comment="gg 的">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/forEleQuan/.babelrc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider_photo" afterPath="$PROJECT_DIR$/spider_photo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forNode/appAsync.js" afterPath="$PROJECT_DIR$/forNode/appAsync.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forNode/package.json" afterPath="$PROJECT_DIR$/forNode/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forNode/yarn.lock" afterPath="$PROJECT_DIR$/forNode/yarn.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forEleQuan/dist/bundle.js" afterPath="$PROJECT_DIR$/forEleQuan/dist/bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forEleQuan/package-lock.json" afterPath="$PROJECT_DIR$/forEleQuan/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forEleQuan/package.json" afterPath="$PROJECT_DIR$/forEleQuan/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forEleQuan/src/index.js" afterPath="$PROJECT_DIR$/forEleQuan/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forEleQuan/webpack.config.js" afterPath="$PROJECT_DIR$/forEleQuan/webpack.config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,102 +24,108 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="appLast.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forNode/appLast.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appAsync.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forNode/appAsync.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="139" column="21" lean-forward="false" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/forNode/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appPost.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forNode/appPost.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forNode/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bcy.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spider_photo/bcy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="async.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forNode/node_modules/async/dist/async.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2737">
-              <caret line="161" column="18" lean-forward="false" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spider_photo/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1972">
-              <caret line="116" column="58" lean-forward="false" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forNode/package.json">
+        <entry file="file://$PROJECT_DIR$/forEleQuan/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forEleQuan/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="raw.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forEleQuan/src/raw.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".babelrc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forEleQuan/.babelrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="44" lean-forward="false" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forEleQuan/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forEleQuan/package-lock.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bundle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forEleQuan/dist/bundle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6555">
+              <caret line="747" column="19" lean-forward="false" selection-start-line="747" selection-start-column="19" selection-end-line="747" selection-end-column="19" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/forEleQuan/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="0.bundle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forEleQuan/dist/0.bundle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.bundle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forEleQuan/dist/main.bundle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-9631">
+              <caret line="180" column="31" lean-forward="true" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1512919589000" expanded="true" signature="30823:30826" ph="/*...*/" />
+                <marker date="1512919589000" expanded="true" signature="30823:30928" ph="[...]" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,8 +157,15 @@
         <option value="$PROJECT_DIR$/spider_photo/app.js" />
         <option value="$PROJECT_DIR$/forNode/appLast.js" />
         <option value="$PROJECT_DIR$/forNode/appAsync.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/forNode/.gitignore" />
+        <option value="$PROJECT_DIR$/forEleQuan/path.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/forEleQuan/src/raw.txt" />
+        <option value="$PROJECT_DIR$/forEleQuan/package.json" />
+        <option value="$PROJECT_DIR$/forEleQuan/.babelrc" />
+        <option value="$PROJECT_DIR$/forEleQuan/dist/bundle.js" />
+        <option value="$PROJECT_DIR$/forEleQuan/webpack.config.js" />
+        <option value="$PROJECT_DIR$/forEleQuan/src/index.js" />
       </list>
     </option>
   </component>
@@ -170,9 +186,11 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/SeDb/node_modules" />
+    <handled-path value="$PROJECT_DIR$/forEleQuan/node_modules" />
     <handled-path value="$PROJECT_DIR$/forNode/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="40" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="711" />
@@ -192,6 +210,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -203,24 +222,31 @@
             <path>
               <item name="spiderDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spiderDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="forNode" type="462c0819:PsiDirectoryNode" />
+              <item name="forEleQuan" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spiderDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="spiderDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="spider_photo" type="462c0819:PsiDirectoryNode" />
+              <item name="forEleQuan" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spiderDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spiderDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="forEleQuan" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/forNode/Webpackv3快速入门/Webpackv3快速入门0.txt&#10;/Users/mac/node/spiderDemo/forNode/.gitignore" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -267,25 +293,27 @@
       <workItem from="1511655147172" duration="1498000" />
       <workItem from="1511666304617" duration="18000" />
       <workItem from="1511698779082" duration="126000" />
+      <workItem from="1512877700123" duration="6290000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22174000" />
+    <option name="totallyTimeSpent" value="28464000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="711" extended-state="0" />
+    <frame x="40" y="23" width="1280" height="711" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39935064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -308,134 +336,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/forNode/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/appAsync.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="148" column="26" lean-forward="false" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/appPostPromise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2975">
-          <caret line="175" column="1" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="175" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/appLast.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/appPost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider_photo/bcy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/node_modules/async/dist/async.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2737">
-          <caret line="161" column="18" lean-forward="false" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider_photo/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="116" column="58" lean-forward="false" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/appAsync.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="125" column="1" lean-forward="true" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/appPostPromise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2975">
-          <caret line="175" column="1" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="175" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/appLast.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/appPost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider_photo/bcy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forNode/node_modules/async/dist/async.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2737">
@@ -464,7 +364,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2074">
           <caret line="122" column="4" lean-forward="true" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="4" />
-          <folding />
+          <folding>
+            <marker date="1512805847000" expanded="true" signature="6253:7185" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6284:7182" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6334:7102" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6707:6961" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6975:7094" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7121:7176" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7208:7367" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7416:7646" ph="[...]" />
+            <marker date="1512805847000" expanded="true" signature="7442:7474" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7506:7549" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7581:7640" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7686:7743" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -528,7 +441,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="54" column="6" lean-forward="false" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
-          <folding />
+          <folding>
+            <marker date="1512805847000" expanded="true" signature="6253:7185" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6284:7182" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6334:7102" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6707:6961" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6975:7094" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7121:7176" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7208:7367" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7416:7646" ph="[...]" />
+            <marker date="1512805847000" expanded="true" signature="7442:7474" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7506:7549" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7581:7640" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7686:7743" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -552,7 +478,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1512805847000" expanded="true" signature="6253:7185" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6284:7182" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6334:7102" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6707:6961" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6975:7094" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7121:7176" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7208:7367" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7416:7646" ph="[...]" />
+            <marker date="1512805847000" expanded="true" signature="7442:7474" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7506:7549" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7581:7640" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7686:7743" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -694,8 +633,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/forNode/appAsync.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="139" column="21" lean-forward="false" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
+        <state relative-caret-position="2448">
+          <caret line="144" column="21" lean-forward="false" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
+          <folding>
+            <marker date="1512805847000" expanded="true" signature="6253:7185" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6284:7182" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6334:7102" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6707:6961" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="6975:7094" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7121:7176" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7208:7367" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7416:7646" ph="[...]" />
+            <marker date="1512805847000" expanded="true" signature="7442:7474" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7506:7549" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7581:7640" ph="{...}" />
+            <marker date="1512805847000" expanded="true" signature="7686:7743" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forNode/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forNode/Webpackv3快速入门/Webpackv3快速入门0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forNode/Webpackv3快速入门/Webpackv3快速入门1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forEleQuan/path.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="41" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -708,10 +692,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forNode/.gitignore">
+    <entry file="file://$PROJECT_DIR$/forEleQuan/yarn-error.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forNode/Webpackv3快速入门/Webpackv3快速入门2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forNode/Webpackv3快速入门/Webpackv3快速入门6.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forEleQuan/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forEleQuan/dist/bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6555">
+          <caret line="747" column="19" lean-forward="false" selection-start-line="747" selection-start-column="19" selection-end-line="747" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forEleQuan/src/raw.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forEleQuan/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="44" lean-forward="false" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forEleQuan/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forEleQuan/dist/main.bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9631">
+          <caret line="180" column="31" lean-forward="true" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1512919589000" expanded="true" signature="30823:30826" ph="/*...*/" />
+            <marker date="1512919589000" expanded="true" signature="30823:30928" ph="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forEleQuan/dist/0.bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forEleQuan/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forEleQuan/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forEleQuan/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding />
         </state>
       </provider>
