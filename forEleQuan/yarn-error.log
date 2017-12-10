@@ -1,0 +1,42 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add npm -g
+
+PATH: 
+  /Users/mac/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/aria2/bin:/Users/mac/Library/Android/sdk/tools:/Users/mac/Library/Android/sdk/platform-tools:/Users/mac/android-ndk-r13b
+
+Yarn version: 
+  1.2.1
+
+Node version: 
+  9.2.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "elequan",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "webpack": "^3.10.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: connect ECONNREFUSED 151.101.72.162:80
+      at Object._errnoException (util.js:1031:13)
+      at _exceptionWithHostPort (util.js:1052:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1195:14)
