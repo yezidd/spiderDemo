@@ -65,9 +65,18 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 console.log("--Hello World----");
+
+const txt = __webpack_require__(1);
+console.log(txt);
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = "你好这边是文本的txt---Hello World"
 
 /***/ })
 /******/ ]);
