@@ -1,19 +1,9 @@
-let get = () => {
-  return import("lodash")
-};
+import React from 'react'
+import ReactDOM from 'react-dom'
 
+import App from './App';
 
-console.log("--Hello World----");
-console.log("--------12------")
-const txt = require('./raw.txt');
-console.log(txt);
-
-
-@some
-class Some {
-
-}
-
-function some(lei) {
-  console.log(lei);
-}
+ReactDOM.render(
+  <App/>,
+  document.getElementById('app')
+);

@@ -27,7 +27,9 @@ const config = {
     hot: true
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./dist/index.html"
+    }),
     new webpack.HotModuleReplacementPlugin()
   ]
 };
