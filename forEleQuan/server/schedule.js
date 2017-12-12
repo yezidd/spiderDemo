@@ -49,8 +49,8 @@ function getQuanUrl(item, callback) {
       const $ = cheerio.load(res.text, {decodeEntities: false});
 
       let urlItem = $("div.buy").find('a').attr("href");
-      // console.log(urlItem);
-      url_data[item.index].url_item = urlItem;
+      console.log(decodeURIComponent(urlItem));
+      url_data[item.index].url_item = decodeURIComponent(urlItem);
       callback(null, "wancheng");
     });
 }
