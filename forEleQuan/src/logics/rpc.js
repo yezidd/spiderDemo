@@ -37,6 +37,18 @@ async function request(url, _options) {
   const text = await resp.text();
   const json = JSON.parse(text);
   console.log(json);
+
+  //状态码以2开头的说明请求成功
+  if (resp.status.toString().indexOf("2") === 0) {
+
+  } else {
+    //token验证失败
+    if (resp.status === "401") {
+
+    } else {
+      throw new Error(json.message);
+    }
+  }
   return json;
 }
 

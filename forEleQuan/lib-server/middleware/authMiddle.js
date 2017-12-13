@@ -22,21 +22,23 @@ var checkToken = exports.checkToken = function () {
             console.log(ctx.request.header.authorization);
 
             if (!validateAuth(ctx.request.header.authorization)) {
-              _context.next = 6;
+              _context.next = 7;
               break;
             }
 
-            _context.next = 4;
+            console.log("验证成功");
+            _context.next = 5;
             return next();
 
-          case 4:
-            _context.next = 7;
+          case 5:
+            _context.next = 9;
             break;
 
-          case 6:
+          case 7:
+            console.log("验证失败");
             ctx.throw(401, {}, "token 验证失败");
 
-          case 7:
+          case 9:
           case "end":
             return _context.stop();
         }
@@ -55,7 +57,7 @@ var checkToken = exports.checkToken = function () {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function validateAuth(authorization) {
-  if (authorization.substring(0, 5) === "hello " && authorization.length > 10) {
+  if (authorization.substring(0, 6) === "hello " && authorization.length > 10) {
     return true;
   } else {
     return false;

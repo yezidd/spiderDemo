@@ -34,6 +34,6 @@ app.use(bodyParser());
 //加载路由
 app.use(_router2.default.routes());
 
-app.listen(8080, function () {
+app.listen(3000, function () {
   console.log("----服务器启动-----");
 });

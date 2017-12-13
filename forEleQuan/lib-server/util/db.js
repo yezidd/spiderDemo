@@ -18,6 +18,7 @@ var db = new Sequelize(config.database, config.username, config.password, {
     acquire: 30000,
     idle: 10000
   }
+
 });
 
 module.exports = db;

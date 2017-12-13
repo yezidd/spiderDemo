@@ -19,7 +19,7 @@ var login = exports.login = function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            console.log(ctx.request.body);
+            console.log(ctx.request.body, "-----1-2-----");
 
           case 1:
           case "end":

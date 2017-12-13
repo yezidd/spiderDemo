@@ -16,6 +16,6 @@ var router = new _koaRouter2.default({
 });
 
 //想想对于router的拆分然后类似配置文件的形式，更便于管理
-router.post("/", _authMiddle.checkToken, _auth.login);
+router.post("/login", _authMiddle.checkToken, _auth.login);
 
 module.exports = router;

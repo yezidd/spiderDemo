@@ -3,9 +3,13 @@ import data from './data.json';
 import db from './util/db';
 import router from './controller/router';
 
+import checkModel from './middleware/checkModel';
+
 var bodyParser = require('koa-bodyparser');
 
 const app = new Koa();
+
+
 
 
 db
@@ -16,6 +20,9 @@ db
   .catch(err => {
     console.error('not success:', err);
   });
+
+
+checkModel();
 
 //加载解析post参数
 app.use(bodyParser());

@@ -3,19 +3,30 @@
  */
 import React, {Component} from 'react';
 import 'antd-mobile/dist/antd-mobile.css';
-import {List, InputItem, WhiteSpace} from 'antd-mobile';
+import {List, InputItem} from 'antd-mobile';
 import {observer} from 'mobx-react';
 import {LoginForm} from "../logics/auth";
+import {Toast} from 'antd-mobile';
 
 @observer
 export default class Login extends Component {
 
   LoginForm = new LoginForm();
 
-  login = () => {
-    console.log("---12---3--4")
-    console.log(this.LoginForm)
-    this.LoginForm.login()
+  login = async () => {
+    console.log("---12---3--4");
+    console.log(this.LoginForm);
+    try {
+      Toast.loading();
+      await this.LoginForm.login();
+      setTimeout(() => {
+        Toast.hide();
+      }, 3000);
+
+    }
+    catch (err) {
+      Toast.info(err.message);
+    }
   };
 
   render() {
