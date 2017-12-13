@@ -20,12 +20,27 @@ const config = {
         exclude: /(node_modules|bower_components)/,
         use: 'babel-loader'
       },
-      {test: /\.json/, use: "json-loader"}
+      {test: /\.json/, use: "json-loader"},
+      {
+        test: /\.css$/,
+        use: [
+          {loader: "style-loader"},
+          {loader: "css-loader"}
+        ]
+      }
     ]
   },
   devServer: {
     contentBase: './dist',
-    hot: true
+    port: "5000",
+    hot: true,
+    proxy: {
+      '*': {
+        target: 'http://[::1]:3000/api/v1',
+        secure: false,
+        changeOrigin: true
+      }
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({

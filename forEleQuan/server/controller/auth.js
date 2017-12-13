@@ -1,3 +1,3 @@
 export async function login(ctx) {
-  ctx.body = "HELLO WORLD";
+  console.log(ctx.request.body,"-----1-2-----");
 }

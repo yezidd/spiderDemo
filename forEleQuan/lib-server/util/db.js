@@ -1,0 +1,23 @@
+"use strict";
+
+var config;
+if (process.env.NODE_ENV === "development") {
+  config = require("../config/config.dev");
+} else {
+  config = require("../config/config.pro");
+}
+
+var Sequelize = require('sequelize');
+var db = new Sequelize(config.database, config.username, config.password, {
+  host: 'localhost',
+  dialect: 'mysql',
+
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  }
+});
+
+module.exports = db;

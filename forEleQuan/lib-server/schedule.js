@@ -1,5 +1,11 @@
 "use strict";
 
+var _stringify = require("babel-runtime/core-js/json/stringify");
+
+var _stringify2 = _interopRequireDefault(_stringify);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var request = require("superagent");
 
 var cheerio = require("cheerio");
@@ -47,8 +53,8 @@ function getQuanUrl(item, callback) {
     var $ = cheerio.load(res.text, { decodeEntities: false });
 
     var urlItem = $("div.buy").find('a').attr("href");
-    // console.log(urlItem);
-    url_data[item.index].url_item = urlItem;
+    console.log(decodeURIComponent(urlItem));
+    url_data[item.index].url_item = decodeURIComponent(urlItem);
     callback(null, "wancheng");
   });
 }
@@ -66,7 +72,7 @@ function run() {
     if (err) {
       console.log("发生错误");
     }
-    fs.writeFileSync("data.json", JSON.stringify(result), 'utf-8');
+    fs.writeFileSync("data.json", (0, _stringify2.default)(result), 'utf-8');
   });
 }
 
