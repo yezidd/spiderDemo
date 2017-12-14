@@ -13,7 +13,8 @@ export async function login(ctx) {
       where: {
         phone,
         password
-      }
+      },
+      raw: true
     });
     if (result) {
       ctx.status = 200;

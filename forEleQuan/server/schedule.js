@@ -6,7 +6,7 @@ const Async = require("async");
 
 const fs = require("fs");
 
-const db= require("./util/db");
+const db = require("./util/db");
 
 const Quan = require('./model/Quan');
 
@@ -57,20 +57,25 @@ function getQuanUrl(item, callback) {
 //将uuid存储到数据库中
 async function saveInSql(item, callback) {
   let match = item.url_item.match(/group_sn=([0-9|a-z]{32})/ig);
-  console.log("----12---",match)
+  console.log("----12---", match)
   if (match) {
     try {
-      await Quan.create({
-        uuid: match[0].split("=")[1]
-      });
+      let data = await Quan.findOne({where: {uuid: match[0].split("=")[1]}, raw: true});
+      if (data) {
+        //存在的话就不重新存储了
+      } else {
+        await Quan.create({
+          uuid: match[0].split("=")[1]
+        });
+      }
       console.log("----完成---")
       callback(null, "完成")
     }
     catch (err) {
-      console.log("错误---",err.message);
+      console.log("错误---", err.message);
       callback(err, err.message);
     }
-  }else{
+  } else {
     console.log("----完成无数据---")
     callback(null, "完成无数据")
   }
