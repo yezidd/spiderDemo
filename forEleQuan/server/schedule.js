@@ -6,6 +6,10 @@ const Async = require("async");
 
 const fs = require("fs");
 
+const db= require("./util/db");
+
+const Quan = require('./model/Quan');
+
 const url_home = "http://www.quanmama.com/quan_ele_me";
 
 const url_data = [];
@@ -34,13 +38,8 @@ function getItem(callback) {
     })
 }
 
-//获取每一个item的详细信息
-function getItemInfo(onearg, done) {
-
-}
-
 function getQuanUrl(item, callback) {
-  console.log(item);
+  // console.log(item);
   request.get(item.home_url)
     .end(function (err, res) {
       if (err) {
@@ -49,14 +48,44 @@ function getQuanUrl(item, callback) {
       const $ = cheerio.load(res.text, {decodeEntities: false});
 
       let urlItem = $("div.buy").find('a').attr("href");
-      console.log(decodeURIComponent(urlItem));
+      // console.log(decodeURIComponent(urlItem));
       url_data[item.index].url_item = decodeURIComponent(urlItem);
       callback(null, "wancheng");
     });
 }
 
+//将uuid存储到数据库中
+async function saveInSql(item, callback) {
+  let match = item.url_item.match(/group_sn=([0-9|a-z]{32})/ig);
+  console.log("----12---",match)
+  if (match) {
+    try {
+      await Quan.create({
+        uuid: match[0].split("=")[1]
+      });
+      console.log("----完成---")
+      callback(null, "完成")
+    }
+    catch (err) {
+      console.log("错误---",err.message);
+      callback(err, err.message);
+    }
+  }else{
+    console.log("----完成无数据---")
+    callback(null, "完成无数据")
+  }
+}
+
 //函数主入口
 function run() {
+  db
+    .authenticate()
+    .then(() => {
+      console.log('success');
+    })
+    .catch(err => {
+      console.error('not success:', err);
+    });
   Async.waterfall([
     function (done) {
       getItem(done)
@@ -67,6 +96,11 @@ function run() {
       });
       // done(null, "完成");
     },
+    function (data, done) {
+      Async.eachSeries(data, saveInSql, function () {
+        done(null, url_data);
+      })
+    }
   ], function (err, result) {
     if (err) {
       console.log("发生错误");
