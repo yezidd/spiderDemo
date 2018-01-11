@@ -12,7 +12,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var User = _db2.default.define("user", {
   id: {
-    type: _sequelize2.default.INT,
+    type: _sequelize2.default.INTEGER,
     autoIncrement: true,
     primaryKey: true
   },
@@ -32,7 +32,8 @@ var User = _db2.default.define("user", {
   }
 }, {
   timestamps: true,
-  timezone: '+08:00'
+  logging: console.log
+
 });
 
 module.exports = User;

@@ -13,9 +13,10 @@ export async function _getToken() {
   return await localStorage.getItem("token");
 }
 
+const URLPRE = "/api/v1"
 
 async function request(url, _options) {
-  const uri = new URI(url);
+  const uri = new URI(URLPRE + url);
 
   const options = _options || {};
   options.method = options.method || 'GET';

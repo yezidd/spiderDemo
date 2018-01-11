@@ -16,6 +16,10 @@ var _router = require('./controller/router');
 
 var _router2 = _interopRequireDefault(_router);
 
+var _checkModel = require('./middleware/checkModel');
+
+var _checkModel2 = _interopRequireDefault(_checkModel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var bodyParser = require('koa-bodyparser');
@@ -27,6 +31,8 @@ _db2.default.authenticate().then(function () {
 }).catch(function (err) {
   console.error('not success:', err);
 });
+
+(0, _checkModel2.default)();
 
 //加载解析post参数
 app.use(bodyParser());

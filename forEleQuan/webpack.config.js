@@ -31,15 +31,17 @@ const config = {
     ]
   },
   devServer: {
-    contentBase: './dist',
     port: "5000",
     hot: true,
+    historyApiFallback: true,
     proxy: {
-      '*': {
-        target: 'http://[::1]:3000/api/v1',
+      '/api/v1/*': {
+        target: 'http://localhost:3000',
         secure: false,
-        changeOrigin: true
-      }
+        changeOrigin: true,
+        logLevel: "debug",
+        // pathRewrite: {"^/": "/api/v1/"},
+      },
     }
   },
   plugins: [

@@ -8,6 +8,8 @@ var _authMiddle = require('../middleware/authMiddle');
 
 var _auth = require('./auth');
 
+var _quan = require('./quan');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //restful API服务器的前缀
@@ -17,5 +19,8 @@ var router = new _koaRouter2.default({
 
 //想想对于router的拆分然后类似配置文件的形式，更便于管理
 router.post("/login", _authMiddle.checkToken, _auth.login);
+router.get("/reg", _auth.reg);
 
+//券有关的api
+router.get("/quan", _quan.getQuans);
 module.exports = router;
